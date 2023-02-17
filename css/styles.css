@@ -78,6 +78,7 @@
     --lead-color: #FFF;
     --logo-color: #4D5AE5;
     --shadow-color: #F4F4FD;
+    --border-color: #8E8F99;
   }
   body{
    font-family: 'Roboto', sans-serif;
@@ -458,7 +459,7 @@ margin-bottom: 8px;
   display: flex;
 width: 264px;
 height: 112px;
-background: #F4F4FD;
+background: var(--shadow-color);
 border-radius: 4px;
 margin-bottom: 8px;
 }
@@ -524,7 +525,7 @@ width: 168px;
 height: 88px; }
 
 .company-list-item:hover{
-border: 1px solid #404BBF;
+border: 1px solid var(--primary-button-color);
 border-radius: 4px;
 }
 .company-logo{
@@ -533,23 +534,23 @@ border-radius: 4px;
   justify-content: center;
   width: 100%;
   height: 100%;
-  border: 1px solid #8E8F99;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
-  fill: #8E8F99;
+  fill: var(--border-color);
  
 }
 .company-logo:hover{
-  fill: #404BBF;
+  fill: var(--primary-button-color);
 }
 .company-logo-item {
   display: flex;
   width: 104px;
   height: 56px;
-  fill:#8E8F99;
+  fill: var(--border-color);
 
 }
 .company-logo-item:hover{
-  fill: #404BBF;
+  fill: var(--primary-button-color);
 }
 .footer-contacts-list{
   display: flex;
@@ -585,7 +586,7 @@ font-weight: 500;
 font-size: 16px;
 line-height: 24px;
 letter-spacing: 0.02em;
-color: #FFFFFF;
+color: var(--lead-color);
 }
 .footer-link{
 margin-right: auto;
