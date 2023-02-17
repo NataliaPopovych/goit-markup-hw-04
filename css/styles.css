@@ -219,6 +219,8 @@ color: var(--lead-color);
     text-align: center;
     padding-top: 188px; 
     padding-bottom: 188px;
+    margin: 0 auto;
+    max-width: 1440px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
     url(../images/people-office.jpg);
     background-repeat: no-repeat;
@@ -270,6 +272,7 @@ border: transparent;
     font-size: 20px;
     line-height: 1.2;
     margin: 0;
+    margin-top: 8px;
     margin-bottom: 8px;
     letter-spacing: 0.02em;
     color: var(--main-color-title);  
@@ -296,7 +299,7 @@ color:var(--main-color-title);
   }
   .activity-section{
     padding-top: 0;
-    margin-top: 120px;
+  
 }
 
   .activity-list{
@@ -386,7 +389,6 @@ border: 1px solid var(--secondary-color);
 border-radius: 4px;
 cursor: pointer;
 padding: 12px 24px;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
 .button-list:hover, .button-list:focus{
   color: var(--lead-color);
@@ -413,7 +415,6 @@ margin-bottom: 8px;
   }
   .project-card{
     flex-basis: calc((100% - 2 * 24px) / 3);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
   .images{
     text-decoration: none;
@@ -421,8 +422,12 @@ margin-bottom: 8px;
     max-width: 100%;
     height: auto;
   }
+  .images:hover,
+  .images:focus{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+
   .container{
-   
     width: 100%;
     max-width: 1158px;
   margin:0 auto;
@@ -455,18 +460,10 @@ margin-bottom: 8px;
  
  
 }
-.advantage{ 
-  display: flex;
-width: 264px;
-height: 112px;
-background: var(--shadow-color);
-border-radius: 4px;
-margin-bottom: 8px;
-}
+
+ 
 
 .advantage-icon{
-  display:flex; 
-  justify-content: center;
   width: 64px;
   height: 64px;
 }
@@ -511,23 +508,21 @@ border-bottom: 1px solid var(--secondary-color);
   fill: var(--shadow-color);
 
 }
-.social-links:hover{
+.social-links:hover,
+.social-links:focus{
   background-color: var(--primary-button-color);
 
+}
+.logo-item{
+  width: 104px;
+  height: 56px;
 }
 .company-list {
   display: flex;
   justify-content: center;
   gap: 24px;
 }
-.company-list-item{
-width: 168px;
-height: 88px; }
 
-.company-list-item:hover{
-border: 1px solid var(--primary-button-color);
-border-radius: 4px;
-}
 .company-logo{
   display: flex;
   align-items: center;
@@ -539,18 +534,14 @@ border-radius: 4px;
   fill: var(--border-color);
  
 }
-.company-logo:hover{
+.company-logo:hover,
+.company-logo:focus{
   fill: var(--primary-button-color);
 }
-.company-logo-item {
-  display: flex;
-  width: 104px;
-  height: 56px;
-  fill: var(--border-color);
+.company-item{
 
-}
-.company-logo-item:hover{
-  fill: var(--primary-button-color);
+  width:168px;
+height:88px;
 }
 .footer-contacts-list{
   display: flex;
@@ -558,9 +549,13 @@ border-radius: 4px;
   gap: 16px;
 }
 
-.footer-contacts-item{
+.footer-contacts-icon{
   width: 24px;
   height: 24px;
+}
+.footer-contacts-item{
+  width: 40px;
+  height: 40px;
 }
 
  .footer-links{
@@ -572,19 +567,19 @@ border-radius: 4px;
  border-radius: 50%;
  background: rgba(255, 255, 255, 0.1);
  fill: var(--shadow-color);}
- .footer-links:hover{
+ .footer-links:hover,
+ .footer-links:focus
+ {
   background: #31D0AA;
  }
-.footer{
-  display: flex;
-  flex-direction: row;
-}
+
 .footer-name{
 font-family: 'Roboto', sans-serif ;
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 24px;
+margin-bottom: 16px;
 letter-spacing: 0.02em;
 color: var(--lead-color);
 }
@@ -592,13 +587,15 @@ color: var(--lead-color);
 margin-right: auto;
 }
 .advantages-item {
-  display: block;
- 
+  display: flex;
   height: 112px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-color: var(--shadow-color);
-  background-image: url(../images/symbol-defs.svg#icon-antenna);
+ align-items: center;
+ justify-content: center;
+ border-radius: 4px;
+  background-color: var(--shadow-color);
+ 
 }
-
+.footer-container{
+  display: flex;
+  gap: 120px;
+}
